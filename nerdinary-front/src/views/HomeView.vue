@@ -1,18 +1,30 @@
 <template>
-  <HelloWorld />
+  <v-app>
+    <NavBar />
+    <v-lazy :min-height="1000" />
+    
+    <FooterView />
+  </v-app>
+  
 </template>
 
 <script>
 import { defineComponent } from 'vue';
 
 // Components
-import HelloWorld from '../components/HelloWorld.vue';
+import NavBar from '@/components/NavBar.vue';
+import FooterView from '@/components/FooterView.vue';
 
 export default defineComponent({
   name: 'HomeView',
 
   components: {
-    HelloWorld,
-  },
+    NavBar,
+    FooterView
+},
 });
 </script>
+
+<style scoped>
+
+</style>
